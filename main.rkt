@@ -89,7 +89,8 @@
              (~? intermediate-newline-clause)) ...
          (~? (log-def return-expr))
          (~? ultimate-newline-clause))
-       (~? return-expr))])
+       (~? return-expr
+           (void)))])
 
 (define-syntax-parser log-once 
   [(_ (~or (~optional (~seq #:skip-count target-skip-count:nat) #:defaults ([target-skip-count #'0]))
